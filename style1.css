@@ -11,6 +11,7 @@ img{
 
 .search {
     margin-left: 1%;
+    display: block;
 }
 .search-icon{
     padding: 5px;
