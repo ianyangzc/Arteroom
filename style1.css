@@ -10,7 +10,7 @@ img{
 }
 
 .search {
-    margin-left: 1%;
+    margin-left: 10%;
     display: block;
 }
 .search-icon{
@@ -98,3 +98,5 @@ input {
     padding: 7px 40px;
     margin: 40px;
   }
+
+  
