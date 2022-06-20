@@ -16,22 +16,38 @@
             <img src="./img/Logo 6 copy.png" alt="logo of arteroom">
         </a>
         <div class="search">
-            <input type="text" placeholder="Search"/>
-            <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <input type="text" placeholder="Search"/><a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
-        <ul class="menu">
+        <ul class="menu openBtn">
          <li>
-            <a href="" class="login">Log In</a>
+            <a href="" class="login openButton" onclick="openForm()">Log In</a>
         </li>
         </ul>
         </div>
     </nav>
+    <div class="loginPopup">
+        <div class="formPopup" id="popupForm">
+          <form  class="formContainer">
+            <h2>Please Log in</h2>
+            <label for="email">
+              <strong>Username</strong>
+            </label>
+            <input type="text" id="username" placeholder="Username" name="username" required>
+            <label for="psw">
+              <strong>Password</strong>
+            </label>
+            <input type="password" id="psw" placeholder="Your Password" name="psw" required>
+            <button type="submit" class="btn">Log in</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </div>
     <div class="wrapper headings">
         <h1>
             Welcome to Arteroom
         </h1>
         <p class="intro">
-            In Arteroom, we bring all artists and art lovers together to make a new experience and introduced and be introduced to the world of artists from all around the world  
+            In Arteroom, we bring all artists and art lovers together to make a new experience and introduced and be introduced to the world of artists from all around the world.
         </p>
         <button>
             <a href="./homepage2.html" class="joinus">           
@@ -40,6 +56,13 @@
         </button>        
     </div>
 </header>
-
+<script>
+    function openForm() {
+      document.getElementById("popupForm").style.display = "block";
+    }
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
+    }
+  </script>
 </body>
 </html>
