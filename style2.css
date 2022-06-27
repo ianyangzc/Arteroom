@@ -80,14 +80,11 @@
         padding: 7px 40px;
         outline: none;
     }
-    h1{
-        margin: 2rem;
-        color: rgb(74, 74, 74);
-    }
-    h2{
+    
+    /* h2{
       color: rgb(255, 255, 255);
       font-size: 10px;
-    }
+    } */
     p{
       font-size: 20px;
       color:rgb(74, 74, 74)
@@ -105,26 +102,28 @@
       padding: 7px 40px;
       margin: 40px;
     }
-    li {
-        width: 2em;
-        height: 2em;
+    .steps li{
+        width: 1em;
+        height: 1em;
         text-align: center;
         line-height: 2em;
         border-radius: 1em;
-        background: rgb(68, 68, 68);
-        margin: 0 1em;
-        display: inline-block;
-        color: white;
+        margin: 0 6em;
         position: relative;
       }
+    
+    .steps{
+        display: flex;
+        flex-direction: row;
+    }
       
-      li::before{
+      .active ~ li::before{
         content: '';
         position: absolute;
-        top: .9em;
-        left: -4em;
-        width: 4em;
-        height: .2em;
+        top: 0.5em;
+        left: -13em;
+        width: 13em;
+        height: .1em;
         background: rgb(69, 69, 69);
         z-index: -1;
       }
@@ -150,4 +149,13 @@
       body {
         font-family: sans-serif;
         padding: 2em;
+      }
+
+      .secondnavbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .backbutton{
+         align-items: center;
       }
