@@ -105,3 +105,49 @@
       padding: 7px 40px;
       margin: 40px;
     }
+    li {
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        line-height: 2em;
+        border-radius: 1em;
+        background: rgb(68, 68, 68);
+        margin: 0 1em;
+        display: inline-block;
+        color: white;
+        position: relative;
+      }
+      
+      li::before{
+        content: '';
+        position: absolute;
+        top: .9em;
+        left: -4em;
+        width: 4em;
+        height: .2em;
+        background: rgb(69, 69, 69);
+        z-index: -1;
+      }
+      
+      
+      
+      li:first-child::before {
+        display: none;
+      }
+      
+      .active {
+        background: rgb(69, 69, 69);
+      }
+      
+      .active ~ li {
+        background: rgb(130, 130, 130);
+      }
+      
+      .active ~ li::before {
+        background: rgb(129, 130, 130);
+      }
+      
+      body {
+        font-family: sans-serif;
+        padding: 2em;
+      }
