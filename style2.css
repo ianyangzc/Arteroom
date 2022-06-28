@@ -108,6 +108,8 @@
         text-align: center;
         line-height: 2em;
         border-radius: 1em;
+        background: rgb(69, 69, 69);
+        display: inline-block;
         margin: 0 6em;
         position: relative;
       }
@@ -117,7 +119,7 @@
         flex-direction: row;
     }
       
-    li::before{
+    .steps li::before{
         content: '';
         position: absolute;
         top: 0.5em;
@@ -137,17 +139,17 @@
       }
       
       .active ~ li {
-        background: rgb(130, 130, 130);
+        background: rgb(185, 185, 185);
       }
       
       .active ~ li::before {
-        background: rgb(129, 130, 130);
+        background: rgb(185, 185, 185);
       }
 
       .secondnavbar{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         margin: 40px 0;
       }
       .backbutton{
@@ -161,4 +163,10 @@
       .fa-angle-left:before {
         content: "\f104";
         color: black;
+      }
+
+      .occupation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
       }
