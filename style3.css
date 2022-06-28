@@ -60,6 +60,7 @@
     }
     a{
         text-decoration: none;
+        color: rgb(39, 39, 39);
         list-style-type: none;
     }
     .headings{
@@ -80,14 +81,11 @@
         padding: 7px 40px;
         outline: none;
     }
-    h1{
-        margin: 2rem;
-        color: rgb(74, 74, 74);
-    }
-    h2{
+    
+    /* h2{
       color: rgb(255, 255, 255);
       font-size: 10px;
-    }
+    } */
     p{
       font-size: 20px;
       color:rgb(74, 74, 74)
@@ -105,3 +103,102 @@
       padding: 7px 40px;
       margin: 40px;
     }
+    .steps li{
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        line-height: 2em;
+        border-radius: 1em;
+        background: rgb(69, 69, 69);
+        display: inline-block;
+        margin: 0 6em;
+        position: relative;
+      }
+    
+    .steps{
+        display: flex;
+        flex-direction: row;
+    }
+      
+    .steps li::before{
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        left: -13em;
+        width: 13em;
+        height: .1em;
+        background: rgb(69, 69, 69);
+        z-index: -1;
+      }
+      
+      li:first-child::before {
+        display: none;
+      }
+      
+      .active {
+        background: rgb(69, 69, 69);
+      }
+      
+      .active ~ li {
+        background: rgb(185, 185, 185);
+      }
+      
+      .active ~ li::before {
+        background: rgb(185, 185, 185);
+      }
+
+      .secondnavbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 40px 0;
+      }
+      .backbutton{
+        display: flex;
+        align-items: center;
+      }
+      i{
+        max-width: 25px;
+        max-height: auto;
+      }
+      .fa-angle-left:before {
+        content: "\f104";
+        color: black;
+      }
+
+      .occupation{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: stretch;
+        margin: 138px 46px;
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(187, 187, 187);
+      }
+
+      h2{
+        font-size: 40px;
+        width: 40px;
+        display: flex;
+        color: rgb(61, 61, 61);
+        padding: 69px 20px;
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(187, 187, 187);
+      }
+
+      .types{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+     .types a{
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(107, 107, 107);
+        padding: 4px 14px;
+        margin: 50px;
+      }
