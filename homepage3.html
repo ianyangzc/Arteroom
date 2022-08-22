@@ -18,15 +18,30 @@
             <input type="text" placeholder="Search"/><a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <ul class="menu openBtn">
-         <li>
-            <a href="" class="login openButton" onclick="openForm()">Log In</a>
-        </li>
-        </ul>
-        </div>
+            <li>
+               <button href="" class="open-button" onclick="openForm()">Log In</button>
+           </li>
+           </ul>
+   <!-- pop up window starts -->
+           <div class="form-popup" id="myForm">
+               <form action="/action_page.php" class="form-container">
+                 <h1>Login</h1>
+             
+                 <label for="email"><b>Email</b></label>
+                 <input type="text" placeholder="Enter Email" name="email" required>
+             
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+             
+                 <button type="submit" class="btn">Login</button>
+                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+               </form>
+           </div>
+   <!-- pop up window ends here -->
     </nav> 
     <div class="secondnavbar">
         <div class="backbutton">
-            <a href="./homepage1.html" class="back">
+            <a href="./homepage2.html" class="back">
                 <i class="fa-solid fa-angle-left fa-xl"></i>
             </a>
            </div>
@@ -42,14 +57,25 @@
         <div class="intro">
             <h2>Hi Arte-Artist</h2>
         </div>
-        <ul class="types">
-            <li><a href="">I'm an artist</a></li>
-            <li><a href=""> I'm a learner</a></li>
-            <li><a href=""> I'm a curator</a></li>
-            <li><a href="">I'm an educator</a></li>
-            <li><a href="">I'm a collector</a></li>
-            <li><a href="">Other</a></li>
-        </ul> 
+        <div class="signupform">
+            <form action="" class="signup">
+                <input type="text" placeholder="Full Name" name="name" required>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Confirm Password" name="psw" required>
+                <button type="submit" class="btn">Next</button>
+                <button type="submit" class="btn">Google</button>
+              </form>
+        </div> 
     </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+        </script>
 </body>
 </html>

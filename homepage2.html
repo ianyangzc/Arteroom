@@ -18,10 +18,26 @@
             <input type="text" placeholder="Search"/><a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <ul class="menu openBtn">
-         <li>
-            <a href="" class="login openButton" onclick="openForm()">Log In</a>
-        </li>
-        </ul>
+            <li>
+               <button href="" class="open-button" onclick="openForm()">Log In</button>
+           </li>
+           </ul>
+   <!-- pop up window starts -->
+           <div class="form-popup" id="myForm">
+               <form action="/action_page.php" class="form-container">
+                 <h1>Login</h1>
+             
+                 <label for="email"><b>Email</b></label>
+                 <input type="text" placeholder="Enter Email" name="email" required>
+             
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password" name="psw" required>
+             
+                 <button type="submit" class="btn">Login</button>
+                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+               </form>
+           </div>
+   <!-- pop up window ends here -->
         </div>
     </nav> 
     <div class="secondnavbar">
@@ -51,5 +67,14 @@
             <li><a href="">Other</a></li>
         </ul> 
     </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+        </script>
 </body>
 </html>
