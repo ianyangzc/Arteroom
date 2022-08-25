@@ -203,6 +203,14 @@
       padding: 4px 14px;
       margin: 50px;
       }
+      .types a:hover{
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(220, 0, 100);
+        padding: 4px 14px;
+        margin: 50px;
+      }
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   color: rgb(220,0,100) ;
